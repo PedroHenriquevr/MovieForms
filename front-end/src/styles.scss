@@ -1,0 +1,16 @@
+@import './config-scss/reset.scss';
+
+
+html {
+  background-color: rgb(16, 16, 16);
+}
+
+main {
+  width: rem-calc(600);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.col-4 {
+  width: 33.12% !important;
+}

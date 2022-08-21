@@ -1,0 +1,100 @@
+  <div class="card">
+    <div class="flex flex-column">
+      <div class="title fundo flex align-items-center">
+        <div id="titleQuest">
+          <h1>Mega Questionario</h1>
+        </div>
+      </div>
+
+      <div class="fundo">
+        <div class="questions">
+          <h1>1. Qual plataforma de streaming você assina</h1>
+        </div>
+        <div class="grid content ">
+          <div class="col-4 streaming">
+            <ul>
+              <li>Netflix</li>
+              <li>Prime Video</li>
+              <li>Disney+</li>
+              <li>GloboPlay</li>
+              <li>Apple TV+</li>
+              <li>Hulu</li>
+            </ul>
+          </div>
+          <div class="col-4 choices">
+            <h1>Sim</h1>
+            <div class="spacing" *ngFor="let q of question; index as j ">
+              <label for="p1" class="checkmark">
+                <input type="radio" [name]="q.name" [value]="q.value" [(ngModel)]="escolha.p1[j]">
+              </label>
+            </div>
+          </div>
+          <div class="col-4 choices">
+            <h1>Não</h1>
+            <div class="spacing" *ngFor="let q of question; index as j">
+              <label class="checkmark">
+                <input type="radio" name="{{q.name}}" value="{{q.value}}" [(ngModel)]="lixo.lixo[j]">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fundo">
+      <div class="questions">
+        <h1>2. Você tem assinado mais de uma plataforma?</h1>
+      </div>
+      <div class="choice">
+        <div class="spacing" *ngFor="let t of question2">
+          <label for="p2" class="checkmark2">
+            <input type="radio" [name]="t.grupo" [value]="t.value" [(ngModel)]="escolha.p2">
+            <h1>{{t.name}}</h1>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="fundo">
+      <div class="questions">
+        <h1>3. Na semana, qual é a probabilidade de você usar sites de streaming?</h1>
+      </div>
+      <div class="choice">
+        <div class="spacing" *ngFor="let y of question3">
+          <label for="p3" class="checkmark2">
+            <input type="radio" [name]="y.grupo" [value]="y.valueq3" [(ngModel)]="escolha.p3">
+            <h1>{{y.nameq3}}</h1>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="fundo">
+      <div class="questions">
+        <h1>4. Na semana, quanto tempo você passa nessas plataformas</h1>
+      </div>
+      <div class="choice">
+        <div class="spacing" *ngFor="let u of question4">
+          <label class="checkmark2">
+            <input type="radio" [name]="u.grupo" [value]="u.valueq4" [(ngModel)]="escolha.p4">
+            <h1>{{u.nameq4}}</h1>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="fundo">
+      <div class="questions">
+        <h1>5. Na semana, quantas séries/filmes você costuma assistir?</h1>
+      </div>
+      <div class="choice">
+        <div class="spacing" *ngFor="let i of question5">
+          <label for="p5" class="checkmark2">
+            <input type="radio" [name]="i.grupo" [value]="i.valueq5" [(ngModel)]="escolha.p5">
+            <h1>{{i.nameq5}}</h1>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <button (click)="salvarEscolha()">
+        Enviar
+      </button>
+    </div>
+  </div>

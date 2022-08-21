@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root {
+  --form-control-color: #3E065F;
+}
+
+.card {
+  background-color: #3E065F;
+  width: 1350px;
+  // margin-top: 100px;
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 85%;
+  // margin-right: auto;
+  // margin-left: auto;
+  margin: 100px auto 0 auto;
+  border-radius: 10px;
+
+  .fundo {
+    background-color: #8E05C2;
+    margin-left: 89px;
+    margin-right: 89px;
+    margin-top: 50px;
+    border-radius: 10px;
+
+  }
+
+  .questions {
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 45px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    border-radius: 10px;
+    //margin-top: 30px;
+    //margin-bottom: 30px;
+    //margin-left: 35px;
+
+    h1 {
+      padding: 30px 0 30px 35px;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #titleQuest {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 78px;
+      line-height: 77px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .choices {
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+
+    h1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .choices+.choices {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .choice {
+    background-color: #fff;
+    border-radius: 10px;
+
+    h1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .choice+.choice {
+    border-radius: 10px;
+  }
+
+  .streaming {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .streaming ul li {
+    margin-top: 25px;
+  }
+
+  .checkmark {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    gap: 0.5em;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+
+
+  .spacing+.spacing {
+    margin-top: 1em;
+  }
+
+  .checkmark:focus-within,
+  .checkmark2:focus-within {
+    color: #3E065F;
+  }
+
+  .checkmark2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    gap: 0.5em;
+    padding-top: 10px;
+    padding-left: 96px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+  }
+
+
+  .button {
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+
+    padding: 70px 89px 70px 0;
+
+    button {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 77px;
+
+      cursor: pointer;
+      background-color: #8E05C2;
+      padding: 0 115px 0 115px;
+      border-radius: 10px;
+    }
+  }
+
+  input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+}
