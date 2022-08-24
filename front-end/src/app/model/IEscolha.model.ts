@@ -1,5 +1,5 @@
 export interface IEscolha {
-  p1: any[];
+  p1: number[];
   p2: number;
   p3: number;
   p4: number;

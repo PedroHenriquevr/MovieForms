@@ -1,6 +1,8 @@
-drop table task;
+create database questionario;
 
-CREATE table task(
+use questionario;
+
+CREATE table perguntas(
 id int auto_increment not null primary key,
 p11 int  null,
 p12 int  null,
@@ -14,7 +16,7 @@ p4 int not null,
 p5 int not null
 )
 
-select * from task;
+select * from perguntas;
 
 select count(id)
 from perguntas;
@@ -43,10 +45,6 @@ select count(p11)
 from perguntas
 where p11 = 6;
 
-select count(p11)
-from perguntas
-where p11 = 7;
-
 select count(p12)
 from perguntas
 where p12 = 1;
@@ -70,10 +68,6 @@ where p12 = 5;
 select count(p12)
 from perguntas
 where p12 = 6;
-
-select count(p12)
-from perguntas
-where p12 = 7;
 
 select count(p13)
 from perguntas
@@ -99,10 +93,6 @@ select count(p13)
 from perguntas
 where p13 = 6;
 
-select count(p13)
-from perguntas
-where p13 = 7;
-
 select count(p14)
 from perguntas
 where p14 = 1;
@@ -126,10 +116,6 @@ where p14 = 5;
 select count(p14)
 from perguntas
 where p14 = 6;
-
-select count(p14)
-from perguntas
-where p14 = 7;
 
 select count(p15)
 from perguntas
@@ -155,10 +141,6 @@ select count(p15)
 from perguntas
 where p15 = 6;
 
-select count(p15)
-from perguntas
-where p15 = 7;
-
 select count(p16)
 from perguntas
 where p16 = 1;
@@ -182,10 +164,6 @@ where p16 = 5;
 select count(p16)
 from perguntas
 where p16 = 6;
-
-select count(p16)
-from perguntas
-where p16 = 7;
 -- -------------------------------------------------------------------------
 select count(p2)
 from perguntas
@@ -245,5 +223,3 @@ where p5 = 3;
 
 select count(p5)
 from perguntas
-where p5 = 4;
--- -------------------------------------------------------------------------

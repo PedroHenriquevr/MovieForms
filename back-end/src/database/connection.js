@@ -1,10 +1,10 @@
-var knex = require('knex')({
-  client: 'mysql',
+var knex = require("knex")({
+  client: "mysql",
   connection: {
-      host : 'localhost',      
-      user : 'root',       
-      password : 'senha',
-      database : 'todo'       
-   }
+    host: "localhost",
+    user: "root",
+    password: "senha",
+    database: "questionario",
+  },
 });
-module.exports = knex
+module.exports = knex;
